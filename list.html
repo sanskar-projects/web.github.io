@@ -952,7 +952,100 @@ int main()
 
 
 
+<br>
+<p>
+Simple calculator
+</p>
+<textarea>
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        int result,a,b;
+char choice='x';
+
+result=0;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter choice (+,-,*,/,%) : ");
+        choice = scan.next().charAt(0);
+
+ System.out.println("Enter value of a and b : ");
+a = scan.nextInt();
+b = scan.nextInt();
+switch(choice)
+{
+case '+' : result=a+b;
+break;
+case '-' : result=a-b;
+break;
+case '*' : result=a*b;
+break;
+case '/' : result=a/b;
+break;
+case '%' : result=a%b;
+break;
+default : System.out.println("invalid choice");
+break;
+}
+        
+
+       
+        System.out.println("result: " + result);
+
+
+        scan.close();
+    }
+}
+</textarea>
+<br>
+<p>
+Factorial
+</p>
+<textarea>
+import java.util.Scanner;
+class factorial
+{
+int fact(int n)
+{
+int fact_var;
+if(n==1)
+{
+return n;
+}
+else
+{
+fact_var=n*fact(n-1);
+return fact_var;
+}
+}
+}
+
+
+public class Main{
+    
+
+    public static void main(String[] args) 
+{
+int n,result;
+        
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+        n = scan.nextInt();
+factorial fact_obj=new factorial();
+result=fact_obj.fact(n);
+
+ 
+
+       
+        System.out.println("factorial result: " + result);
+
+
+        scan.close();
+    }
+}
+</textarea>
 
 
 
