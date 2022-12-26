@@ -1,15 +1,13 @@
 
 .button {float:right;
 padding:5px;
-background-color:red;
+background-color:white;
 border:5px solid black;
-color:violet;
 font-family:cursive;}
 
 .link {padding:5px;
-background-color:violet;
+background-color:white;
 border:5px solid black;
-color:red;
 font-family:cursive;}
 
 p {font-family:cursive; color:white;}
