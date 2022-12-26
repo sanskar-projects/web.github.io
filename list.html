@@ -49,7 +49,23 @@ Sanskar-Projects
 <br>
 <br>
 
-
+<p class="link">
+    <a href="#c">
+        C programming
+    </a>
+    </p>
+    
+    <p class="link">
+    <a href="java">
+        Java programming
+    </a>
+    </p>
+    
+    <p class="link">
+    <a href="py">
+        Python programming
+    </a>
+    </p>
 
 
 
@@ -949,11 +965,26 @@ int main()
     }
 }
 </textarea>
-
+<hr>
+    <p id="java">
+        Java programming
+        </p>
+    
+    <p class="link">
+        <a href="#j1">
+            Simple calculator
+            </a>
+        </p>
+    
+    <p class="link">
+        <a href="#j2">
+            Factorial
+            </a>
+    </p>
 
 
 <br>
-<p>
+<p id="j1">
 Simple calculator
 </p>
 <textarea>
@@ -999,7 +1030,7 @@ break;
 }
 </textarea>
 <br>
-<p>
+<p id="j2">
 Factorial
 </p>
 <textarea>
@@ -1045,6 +1076,514 @@ result=fact_obj.fact(n);
         scan.close();
     }
 }
+</textarea>
+    
+    <hr>
+    
+    <p id="py">
+Python programming
+</p>
+
+<p class="link">
+<a href="#p1">
+Insertion sort
+</a>
+</p>
+
+<p class="link">
+<a href="#p2">
+Factorial
+</a>
+</p>
+
+<p class="link">
+<a href="#p3">
+GCD
+</a>
+</p>
+
+<p class="link">
+<a href="#p4">
+Fibonacci
+</a>
+</p>
+
+<p class="link">
+<a href="#p5">
+Sum of a list's elements
+</a>
+</p>
+
+<p class="link">
+<a href="#p6">
+Binary search
+</a>
+</p>
+
+<p class="link">
+<a href="#p7">
+Palindrome
+</a>
+</p>
+
+<p class="link">
+<a href="#p8">
+Bubble sort
+</a>
+</p>
+
+<p class="link">
+<a href="#p9">
+Stack
+</a>
+</p>
+
+<p class="link">
+<a href="#p10">
+Queue
+</a>
+</p>
+
+<p class="link">
+<a href="#p11">
+Percentage
+</a>
+</p>
+
+<p class="link">
+<a href="#p12">
+Percentage change
+</a>
+</p>
+
+<p class="link">
+<a href="#p13">
+SI and CI
+</a>
+</p>
+
+<p class="link">
+<a href="#p14">
+Insertion in a sorted array
+</a>
+</p>
+
+<p class="link">
+<a href="#p15">
+Deletion in a sorted array
+</a>
+</p>
+
+<p class="link">
+<a href="#p16">
+Simple calculator
+</a>
+</p>
+
+
+
+
+
+
+
+
+
+<p id="p1">
+Insertion sort
+</p>
+
+<textarea>
+a = list(eval(input("list")))
+for i in range(1,len(a)):
+    key = a[i]
+    j = i-1
+    while j>=0 and key<a[j]:
+        a[j+1] = a[j]
+        j = j-1
+    else:
+        a[j+1] = key
+print(a)
+</textarea>
+
+<p id="p2">
+Factorial
+</p>
+
+<textarea>
+def f(n) :
+    if n<2:
+        return 1 
+    return n * f(n-1)
+n = int(input("enter a number > 0 : "))
+print("factorial of",n,"is",f(n))
+</textarea>
+
+<p id="p3">
+GCD
+<p>
+
+<textarea>
+def gcd(p,q): 
+    if q==0:
+        return p 
+    return gcd(q,p%q)
+p = int(input("enter a number"))
+q = int(input("enter another number"))
+print (gcd(p,q))
+</textarea>
+
+<p id="p4">
+Fibonacci
+<p>
+
+<textarea>
+def f(n):
+    if n==1:
+        return 0
+    elif n==2:
+        return 1 
+    else:
+        return f(n-1)+f(n-2)
+n = int(input("enter a number "))
+for i in range(1,n+1):
+    print(f(i),end=',')
+print("...")
+
+</textarea>
+
+<p id="p5">
+Sum of a list's elements
+<p>
+
+<textarea>
+def sum(l,n):
+    if n==0:
+        return l[0]
+    else:
+        return l[n]+sum(l,n-1)
+list1 = list(eval(input("enter the elements ")))
+size=len(list1)
+print("sum is",sum(list1,size-1))
+</textarea>
+
+<p id="p6">
+Binary search
+<p>
+
+<textarea>
+def b(a,k):
+    l=0
+    h=len(a)-1
+    while l<=h:
+        m=int((l+h)/2)
+        if k==a[m]:
+            return m 
+        elif k<a[m]:
+            h=m-1
+        else:
+            l=m+1 
+    else:
+        return-999
+a=list(eval(input("enter list elements ")))
+i=int(input("search? "))
+r=b(a,i)
+if r>=0:
+    print(i,"is at index ",r)
+else:
+    print("4 0 4")
+</textarea>
+
+<p id="p7">
+Palindrome
+<p>
+
+<textarea>
+def p(x):
+    return x==x[::-1]
+x=input("enter a string ")
+y=p(x)
+if y:
+    print("yes pallindrome")
+else:
+    print("not pallindrome")
+</textarea>
+
+<p id="p8">
+Bubble sort
+<p>
+
+<textarea>
+a=list(eval(input("LIST ")))
+print("ORIGINAL",a)
+b=len(a)
+for i in range(b):
+    for j in range(0,b-i-1):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+print("SORTED",a)
+</textarea>
+
+<p id="p9">
+Stack
+<p>
+
+<textarea>
+def isEmpty(stk):
+    if stk==[]:
+        return True
+    else:
+        return False
+def Push(stk,item):
+    stk.append(item)
+    top=len(stk)-1
+def Pop(stk):
+    if isEmpty(stk):
+        return "UNDERFLOW"
+    else:
+        item=stk.pop()
+        if len(stk)==0:
+            top=None
+        else:
+            top=len(stk)-1
+        return item
+def Peek(stk):
+    if isEmpty(stk):
+        return "UNDERFLOW"
+    else:
+        top=len(stk)-1
+        return stk[top]
+def Display(stk):
+    if isEmpty(stk):
+        print("STACK EMPTY")
+    else:
+        top=len(stk)-1
+        print(stk[top],"<-top")
+        for a in range(top-1,-1,-1):
+            print(stk[a])
+            
+Stack = []
+top=None 
+
+while True:
+    print("STACK OPERATIONS")
+    print("1 PUSH")
+    print("2 POP")
+    print("3 PEEK")
+    print("4 DISPLAY STACK")
+    print("5 EXIT")
+    ch=int(input("ENTER YOUR CHOICE (1-5) "))
+    if ch==1:
+        item=int(input("ENTER ITEM "))
+        Push(Stack,item)
+    elif ch==2:
+        item=Pop(Stack)
+        if item=="UNDERFLOW":
+            print("UNDERFLOW")
+        else:
+            print(item,"POPPED")
+    elif ch==3:
+        item=Peek(Stack)
+        if item=="UNDERFLOW":
+            print("UNDERFLOW")
+        else:
+            print("TOPMOST",item)
+    elif ch==4:
+        Display(Stack)
+    elif ch==5:
+        break
+    else:
+        print("INVALID CHOICE")
+
+</textarea>
+
+<p id="p10">
+Queue
+<p>
+
+<textarea>
+def cls():
+    print("\n"*100)
+def isEmpty(Qu):
+    if Qu==[]:
+        return True
+    else:
+        return False
+def Enqueue(Qu,item):
+    Qu.append(item)
+    if len(Qu)==1:
+        front=rear=0 
+    else:
+        rear=len(Qu)-1
+def Dequeue(Qu):
+    if isEmpty(Qu):
+        return "UNDERFLOW"
+    else:
+        item=Qu.pop(0)
+    if len(Qu)==0:
+        front=rear=None 
+    return item 
+def Peek(Qu): 
+    if isEmpty(Qu):
+        return "UNDERFLOW"
+    else:
+        front=0 
+    return Qu[front]
+    
+def Display(Qu):
+    if isEmpty(Qu):
+        print("UNDERFLOW")
+    elif len(Qu)==1:
+        print(Qu[0],"<==front,rear")
+    else:
+        front=0 
+        rear=len(Qu)-1
+        print(Qu[front],"<-front")
+        for a in range(1,rear):
+            print(Qu[a])
+        print(Qu[rear],"<-rear")
+queue=[]
+front=None
+while True:
+    cls()
+    print("QUEUE OPERATIONS")
+    print("1 ENQUEUE")
+    print("2 DEQUEUE") 
+    print("3 PEEK")
+    print("4 DISPLAY QUEUE")
+    print("5 EXIT")
+    ch=int(input("ENTER YOUR CHOICE (1-5) "))
+    if ch==1:
+        item=int(input("ENTER ITEM "))
+        Enqueue(queue,item)
+        input("PRESS ENTER TO CONTINUE ")
+    elif ch==2:
+        item=Dequeue(queue)
+        if item=="UNDERFLOW":
+            print("UNDERFLOW")
+        else:
+            print("DEQUEUED",item)
+        input("PRESS ENTER TO CONTINUE")
+    elif ch==3:
+        item=Peek(queue)
+        if item=="UNDERFLOW":
+            print("UNDERFLOW")
+        else:
+            print("FRONTMOST",item)
+        input("PRESS ENTER TO CONTINUE")
+    elif ch==4:
+        Display(queue)
+        input("PRESS ENTER TO CONTINUE")
+    elif ch==5:
+        break
+    else:
+        print("INVALID CHOICE")
+        input("PRESS ENTER TO CONTINUE")
+</textarea>
+
+<p id="p11">
+Percentage
+<p>
+
+<textarea>
+x=float(input("SMALLER NUMBER "))
+y=float(input("BIGGER NUMBER "))
+p=(x*100)/y 
+q=(x*y)/100
+print(x," IS ",p," % OF ",y)
+print(x," % OF ",y," IS ",q)
+</textarea>
+
+<p id="p12">
+Percentage change
+<p>
+
+<textarea>
+x=int(input("NUMBER "))
+y=int(input("% "))
+p=((x*y)/100)+x
+q=x-((x*y)/100)
+print(y," % INCREASE IN ",x," IS ",p)
+print(y," % DECREASE IN ",x," IS ",q)
+</textarea>
+
+<p id="p13">
+SI and CI
+<p>
+
+<textarea>
+p=int(input("PRINCIPAL IN RUPEES = "))
+r=int(input("RATE IN % = "))
+t=int(input("TIME IN YEARS = "))
+i=p*r*t/100
+print("SIMPLE INTEREST IS",i,"RUPEES")
+n=int(input("COMPOUND PER YEAR = "))
+c=p*(1+r/n)**(n*t)
+print("COMPOUND INTEREST IS",c,"RUPEES")
+</textarea>
+
+<p id="p14">
+Insertion in a sorted array
+<p>
+
+<textarea>
+import bisect
+mylist=list(eval(input("ENTER A SORTED LIST ")))
+print("THE LIST IN SORTED ORDER IS")
+print(mylist)
+item=int(input("NEW "))
+ind=bisect.bisect(mylist,item)
+bisect.insort(mylist,item)
+print(item,"INSERTED AT INDEX",ind)
+print("THE LIST AFTER INSERTING NEW ELEMENT IS")
+print(mylist)
+</textarea>
+
+<p id="p15">
+Deletion in a sorted array
+<p>
+
+<textarea>
+def b(a,k):
+    l=0
+    h=len(a)-1
+    while l<=h:
+        m=int((l+h)/2)
+        if k==a[m]:
+            return m 
+        elif k<a[m]:
+            h=m-1
+        else:
+            l=m+1 
+    else:
+        return-999
+mylist=list(eval(input("SORTED LIST")))
+print("THE LIST IN SORTED ORDER IS")
+print(mylist)
+item=int(input("ENTER ELEMENT TO BE DELETED "))
+position=b(mylist,item)
+if position:
+    del mylist[position]
+    print("THE LIST AFTER DELETING",item," ELEMENT IS")
+    print(mylist)
+else:
+    print("SORRY NO SUCH ELEMENT IN THE LIST")
+</textarea>
+
+<p id="p16">
+Simple calculator
+<p>
+
+<textarea>
+def arcalc(x,y): #114
+    return x+y,x-y,x/y,x%y,x*y
+num1=int(input("ENTER NUMBER 1 "))
+num2=int(input("ENTER NUMBER 2 "))
+add,sub,div,mod,mult=arcalc(num1,num2)
+print("SUM OF GIVEN NUMBERS",add)
+print("SUBTRACTION OF GIVEN NUMBERS",sub)
+print("PRODUCT OF GIVEN NUMBERS",mult)
+print("MODULO OF GIVEN NUMBERS",mod)
+print("DIVISION OF GIVEN NUMBERS",div)
 </textarea>
 
 
