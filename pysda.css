@@ -2,8 +2,14 @@
 .button {float:right;
 padding:5px;
 background-color:red;
-border:5px solid white;
+border:5px solid black;
 color:violet;
+font-family:cursive;}
+
+.link {padding:5px;
+background-color:violet;
+border:5px solid black;
+color:red;
 font-family:cursive;}
 
 p {font-family:cursive; color:white;}
