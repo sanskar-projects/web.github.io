@@ -197,6 +197,36 @@ Eligibility to vote tester
 </a>
 </p>
 
+<p class="link">
+<a href="#m">
+Insertion in array using pointer
+</a>
+</p>
+
+<p class="link">
+<a href="#n">
+Deletion in array using pointer
+</a>
+</p>
+
+<p class="link">
+<a href="#o">
+Reversing array without pointer
+</a>
+</p>
+
+<p class="link">
+<a href="#p">
+Reversing array with pointer
+</a>
+</p>
+
+<p class="link">
+<a href="#q">
+Swapping 2 variables using call by address
+</a>
+</p>
+
 
 
 
@@ -968,6 +998,169 @@ int main()
 }
 </textarea>
 <hr>
+
+<p id="m">
+insertion in array using pointer
+</p>
+
+<textarea>
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,6,7,8,9};
+    int *ptr;
+    int pos,i,length;
+    length=9;
+    
+    ptr=arr;
+    
+    printf("enter position(not index) where element has to be inserted");
+    scanf("%d",&pos);
+
+    for(i=(length-1);i>(pos-1);i--)
+    {
+        *(ptr+i)=*(ptr+i-1);
+    }
+    
+    printf("enter element to be inserted\n");
+    scanf("%d",ptr+pos-1);
+    printf("new array:\n");
+    
+    for(i=0;i<length;i++)
+    {
+    printf("%d\n",*(ptr+i));
+    }
+}
+</textarea>
+
+
+
+<p id="n">
+deletion in array using pointer
+</p>
+
+<textarea>
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,99,5,6,7,8,9};
+    int *ptr;
+    int i,pos,length;
+    
+    length=10;
+    ptr=arr;
+
+    printf("enter position(not index) of element which has to be deleted\n");
+    scanf("%d",&pos);
+
+    for(i=(pos-1);i<(length-1);i++)
+    {
+        *(ptr+i)=*(ptr+i+1);
+    }
+
+    printf("new array:\n");
+    
+    for(i=0;i<(length-1);i++)
+    {
+        printf("%d\n",*(ptr+i));
+    }
+}
+</textarea>
+
+
+<p id="o">
+reversing array without pointer
+</p>
+
+<textarea>
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7,8,9};
+    int i,j,swap;
+    
+    j=8;
+
+    for(i=0;i<4;i++)
+    {
+        swap=arr[i];
+        arr[i]=arr[j];
+        arr[j]=swap;
+        j--;
+    }
+
+    for(i=0;i<9;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+}
+</textarea>
+
+
+<p id="p">
+reversing array with pointer
+</p>
+
+<textarea>
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7,8,9};
+    int *ptr;
+    int i,j,swap;
+    ptr=arr;
+
+    for(i=0;i<4;i++)
+    {
+        swap=*(ptr+i);
+        *(ptr+i)=*(ptr+j);
+        *(ptr+j)=swap;
+        j--;
+    }
+
+    for(i=0;i<9;i++)
+    {
+        printf("%d\n",*(ptr+i));
+    }
+}
+</textarea>
+
+
+
+<p id="q">
+swapping 2 variables using call by address
+</p>
+
+<textarea>
+#include<stdio.h>
+
+int swap(int *milk, int *shake);
+
+int main()
+{
+    int a,b;
+    printf("enter value of a and b");
+    scanf("%d %d",&a,&b);
+    swap(&a,&b);
+    printf("swapped\na=%d and b=%d\n",a,b);    
+}
+
+int swap(int *milk, int *shake)
+{
+    int glass;
+    glass=*milk;
+    *milk=*shake;
+    *shake=glass;
+}
+<textarea>
+
+
+
+
+
+
+
+
     <p id="java">
         Java programming
         </p>
@@ -983,6 +1176,16 @@ int main()
             Factorial
             </a>
     </p>
+
+
+
+
+
+
+
+
+
+
 
 
 <br>
