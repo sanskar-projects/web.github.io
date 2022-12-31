@@ -8,7 +8,8 @@ font-family:cursive;}
 .link {padding:5px;
 background-color:white;
 border:5px solid black;
-font-family:cursive;}
+font-family:cursive;
+float:left;}
 
 p {font-family:cursive; color:white;}
 
