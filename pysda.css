@@ -17,6 +17,6 @@ p {font-family:cursive; color:white;}
 
 body {background-color:black;}
 
-textarea {height:50%; width:100%; color:white;}
+textarea {height:50%; width:100%; color:white; background-color:black;}
 
 h1 {font-family:cursive; float:left; color:white;}
